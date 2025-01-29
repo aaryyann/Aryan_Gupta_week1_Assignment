@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
+      <h1 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        <span>✈️</span> Contact Us
+      </h1>
+
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
+          />
+          <p class="error-message text-sm text-red-500 mt-1 hidden">Name is required</p>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
+          />
+          <p class="error-message text-sm text-red-500 mt-1 hidden">Please enter a valid email</p>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
+          />
+          <p class="error-message text-sm text-red-500 mt-1 hidden">Subject is required</p>
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="w-full px-4 py-2 border rounded-lg border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition-colors"
+          ></textarea>
+          <p class="error-message text-sm text-red-500 mt-1 hidden">Message is required</p>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2"
+        >
+          <span>✈️</span> Send Message
+        </button>
+      </form>
+
+      <div id="thankYouMessage" class="hidden text-center">
+        <span class="text-green-500 text-6xl">✔️</span>
+        <h2 class="text-2xl font-bold text-gray-800 mt-4">Thank You!</h2>
+        <p class="text-gray-600 mt-2">Your message has been sent successfully.</p>
+        <button
+          id="resetButton"
+          class="bg-green-500 text-white px-6 py-2 mt-4 rounded-lg hover:bg-green-600 transition-colors"
+        >
+          Send Another Message
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
